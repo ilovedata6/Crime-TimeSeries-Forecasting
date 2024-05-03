@@ -13,5 +13,7 @@ categories = df['category'].unique()
 
 for i in categories:
     new_df = df[df['category'] == i]
+    if not os.path.exists("E:/Data Science/Machine Learning projects/Lahore15Analysis/Categories"):
+        os.mkdir("E:/Data Science/Machine Learning projects/Lahore15Analysis/Categories")
     new_df.to_csv(f"./Categories/{i}.csv")
 print("Processing Finished")
